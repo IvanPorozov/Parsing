@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 from multiprocessing import Pool, cpu_count
+import pandas as pd
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 "
@@ -44,5 +45,8 @@ def collect_product(url: str = "https://rozetka.com.ua/protein/c273294/"):
         results = pool.map(parse_page, urls)
         for result in results:
             products.extend(result)
+
+    df = pd.DataFrame(products)
+    df.to_excel('products.xlsx', index=False)
 
     return products
