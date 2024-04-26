@@ -1,3 +1,5 @@
+!Sports nutrition scraper from the ROSETKA online store
+
 Technologies:
 - BeautifulSoup
 - requests
