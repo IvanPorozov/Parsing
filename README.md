@@ -1,4 +1,4 @@
-[!]Sports nutrition scraper from the ROSETKA online store
+Sports nutrition scraper from the ROSETKA online store
 
 Technologies:
 - BeautifulSoup
